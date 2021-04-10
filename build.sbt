@@ -52,17 +52,3 @@ herokuAppName in Compile := Map(
 )(sys.props.getOrElse("env", "dev"))
 
 herokuJdkVersion in Compile := "1.8"
-
-val devVars = Map(
-  "LOG_LEVEL" -> "DEBUG",
-  "ENV" -> "dev",
-)
-val prodVars = Map(
-  "LOG_LEVEL" -> "DEBUG",
-  "ENV" -> "dev",
-)
-
-herokuConfigVars in Compile := Map(
-  "prod" -> prodVars,
-  "dev" -> devVars
-)(sys.props.getOrElse("env", "dev"))
