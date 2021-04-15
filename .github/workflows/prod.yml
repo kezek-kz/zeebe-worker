@@ -32,6 +32,7 @@ jobs:
           LOG_LEVEL: DEBUG
           HOST: 0.0.0.0
           SWAGGER_SCHEMES: https
+          SWAGGER_HOST: prod-kezek-zeebe-worker.herokuapp.com
           ENV: prod
         run: |
           sbt -Denv=prod stage deployHeroku
